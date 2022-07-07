@@ -1,1 +1,24 @@
-/* styles go here */
+.inputSection {
+  display: block;
+  margin: 10px 0;
+}
+
+fieldset {
+  padding-top: 0;
+}
+
+.firstInputSection {
+  margin-top: 5.5px;
+}
+
+.lastInputSection {
+  margin-bottom: 0;
+}
+
+.formSection:not(:first-child) {
+  margin-top: 20px;
+}
+
+.favoriteCar {
+  overflow: hidden;
+}
