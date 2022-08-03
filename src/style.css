@@ -1,24 +1,8 @@
-.inputSection {
+.fieldlabel:not(:last-child) {
   display: block;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
-.form__fieldset {
-  padding-top: 0;
-}
-
-.firstInputSection {
-  margin-top: 5.5px;
-}
-
-.lastInputSection {
-  margin-bottom: 0;
-}
-
-.formSection:not(:first-child) {
-  margin-top: 20px;
-}
-
-.favoriteCar {
-  overflow: hidden;
+.groupOfFields:not(:last-child) {
+  margin-bottom: 20px;
 }

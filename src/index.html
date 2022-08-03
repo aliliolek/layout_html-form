@@ -9,170 +9,186 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div class="content">
-      <form
-       action="/"
-       method="post"
-       class="form"
-      >
-        <fieldset class="form__fieldset formSection">
-          <legend>Personal information</legend>
+    <form
+     method="post"
+     action="#"
+     class="registration-form"
+    >
+      <fieldset class="groupOfFields">
+        <legend class="groupOfFields__title">Personal information</legend>
 
-          <div class="inputSection firstInputSection">
-            <label for="surname">Surname:</label>
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          Surname:
+          <input
+           class="fieldlabel__input"
+           name="surname"
+           autocomplete="off"
+           required
+          >
+        </label>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          Name:
+          <input
+           class="fieldlabel__input"
+           name="name"
+           autocomplete="off"
+          >
+        </label>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          How old are You?
+
+          <input class="fieldlabel__input"
+           type="number"
+           name="age"
+           min="1"
+           max="100"
+           value="12"
+          >
+        </label>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          Full date of birth:
+          <input
+           class="fieldlabel__input"
+           type="date"
+           name="birthday"
+          >
+        </label>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          I accept the term of the agreement
+          <input
+           class="fieldlabel__input"
+           type="checkbox"
+           name="agreement"
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="groupOfFields">
+        <legend class="groupOfFields__title">Registration</legend>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          E-mail:
+          <input
+           class="fieldlabel__input"
+           type="email"
+           name="email"
+           data-qa="field-placeholder"
+           placeholder="email@example.com"
+          >
+        </label>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          Password:
+          <input
+           class="fieldlabel__input"
+           type="password"
+           name="password"
+           minlength="1"
+           maxlength="30"
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="groupOfFields">
+        <legend class="groupOfFields__title">An interesting fact about you!</legend>
+
+        <div class="groupOfFields__fieldlabel fieldlabel">
+          Do you love cats?
+
+          <label>
             <input
-             type="text"
-             name="surname"
-             minlength="2"
-             maxlength="100"
-             autocomplete="off"
-             required
+             class="fieldlabel__input"
+             type="radio"
+             name="cats"
+             value="yes"
             >
-          </div>
+            Yes
+          </label>
 
-          <div class="inputSection">
-            <label for="name">Name:</label>
+          <label>
             <input
-             type="text"
-             name="name"
-             minlength="2"
-             maxlength="100"
-             autocomplete="off"
-             required
+             class="fieldlabel__input"
+             type="radio"
+             name="cats"
+             value="no"
             >
-          </div>
-
-          <div class="inputSection">
-            <label for="howOld">How old are You?</label>
-            <input
-             type="number"
-             value="12"
-             min="1"
-             max="100"
-             name="howOld"
-            >
-          </div>
-
-          <div class="inputSection">
-            <label for="dateOfBirth">Full date of birth:</label>
-            <input type="date" name="dateOfBirth">
-          </div>
-
-          <div class="inputSection lastInputSection">
-            <label for="terms">I accept the term of the agreement</label>
-            <input
-             type="checkbox"
-             name="terms"
-             required
-            >
-          </div>
-        </fieldset>
-
-
-        <fieldset class="form__fieldset formSection">
-          <legend>Registration</legend>
-
-          <div class="inputSection firstInputSection">
-            <label for="email">E-mail:</label>
-            <input
-             type="email"
-             placeholder="email@example.com"
-             name="email"
-             required
-            >
-          </div>
-
-          <div class="inputSection lastInputSection">
-            <label for="password">Password:</label>
-            <input
-             type="password"
-             name="password"
-             required
-            >
-          </div>
-        </fieldset>
-
-
-        <fieldset class="form__fieldset formSection">
-          <legend>An interesting fact about you!</legend>
-
-          <div class="inputSection firstInputSection">
-            <label for="loveCats">Do you love cats?</label>
-            <input type="radio" name="loveCatsYes">
-            <label for="loveCats">Yes</label>
-            <input type="radio" name="loveCatsNo">
-            <label for="loveCats">No</label>
-          </div>
-
-          <div class="inputSection">
-            <label for="favoriteColor">What is your favorite color?</label>
-            <input type="color" name="color">
-          </div>
-
-          <div class="inputSection">
-            <label for="bedTime">What time do you go to bed?</label>
-            <input type="time" name="bedTime">
-          </div>
-
-          <div class="inputSection">
-            <label for="dateOfBirth">What are your favorite brand of cars?</label>
-            <select
-             size="4"
-             name="cars[]"
-             class="favoriteCar"
-             multiple
-            >
-              <option value="BMW">BMW</option>
-              <option value="Audi">Audi</option>
-              <option value="Lada">Lada</option>
-              <option value="NoBrand"> </option>
-            </select>
-          </div>
-
-          <div class="inputSection lastInputSection">
-            <label for="terms">How do you rate our work?</label>
-            <input
-             type="range"
-             name="range"
-             value="0"
-            >
-          </div>
-        </fieldset>
-
-        <fieldset class="form__fieldset formSection">
-          <legend>Additional info:</legend>
-
-          <div class="inputSection firstInputSection">
-            <label for="comments">Comments:</label>
-            <textarea
-             name="comments"
-             cols="20"
-             rows="2"
-             maxlength="300"
-             autocomplete="off"
-            >
-
-            </textarea>
-          </div>
-
-          <div class="inputSection lastInputSection">
-            <label for="reccomend">Would you recommend us?</label>
-            <select
-             size="1"
-             name="reccomend"
-            >
-              <option>yes</option>
-              <option>no</option>
-            </select>
-          </div>
-        </fieldset>
-
-        <div class="formSection">
-          <button type="submit">Submit</button>
+            No
+          </label>
         </div>
 
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          What is your favorite color?
+          <input
+           class="fieldlabel__input"
+           type="color"
+           name="color"
+          >
+        </label>
 
-      </form>
-    </div>
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          What time do you go to bed?
+          <input
+           class="fieldlabel__input"
+           type="time"
+           name="time"
+           step="1"
+          >
+        </label>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          What are your favorite brand of cars?
+
+          <select
+           class="fieldlabel__input"
+           multiple
+           name="cars"
+          >
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="lada">Lada</option>
+          </select>
+        </label>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          How do you rate our work?
+
+          <input
+           class="fieldlabel__input"
+           type="range"
+           name="rate"
+           min="0"
+           max="5"
+           step="1"
+           value="0"
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="groupOfFields">
+        <legend class="groupOfFields__title">Additional info:</legend>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          Comments:
+          <textarea class="fieldlabel__input" name="comments"></textarea>
+        </label>
+
+        <label class="groupOfFields__fieldlabel fieldlabel" >
+          Would you recommend us?
+
+          <select class="fieldlabel__input" name="recommend">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <button type="submit" class="groupOfFields submit-button">
+        Submit
+      </button>
+    </form>
   </body>
 </html>
