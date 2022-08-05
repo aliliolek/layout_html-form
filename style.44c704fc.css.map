@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,6BACE,aAAc,CACd,kBACF,CAEA,gCACE,kBACF","file":"style.44c704fc.css","sourceRoot":"..\\src","sourcesContent":[".fieldlabel:not(:last-child) {\n  display: block;\n  margin-bottom: 10px;\n}\n\n.groupOfFields:not(:last-child) {\n  margin-bottom: 20px;\n}\n"]}
